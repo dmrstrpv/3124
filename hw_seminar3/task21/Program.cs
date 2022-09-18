@@ -11,10 +11,10 @@ int x2 = Coord("x", "B");
 int y2 = Coord("y", "B");
 int z2 = Coord("z", "B");
 
-int Coord(string coorName, string pointName)
+int Coord(string coordName, string pointName)
 
 {
-    Console.Write($"Введите координату {coorName} точки {pointName}: ");
+    Console.Write($"Введите координату {coordName} точки {pointName}: ");
     return Convert.ToInt32(Console.ReadLine());
 }
 
