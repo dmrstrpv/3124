@@ -2,8 +2,7 @@
 // [1 2 3 4 5] -> [5 4 3 2 1]
 // [6 7 3 6] -> [6 3 7 6]
 
-
-int[] GetArray(int size, int leftRange, int rightRange)
+int[] GetArray(int size, int leftRange,  int rightRange)
 {
     int[] arr = new int[size];
     Random rand = new Random();
@@ -11,26 +10,22 @@ int[] GetArray(int size, int leftRange, int rightRange)
     {
         arr[i] = rand.Next(leftRange, rightRange + 1);
     }
+    size = 16;
     return arr;
+    
 }
 
-// int ReadNumber(string message)
-// {
-//     Console.WriteLine(message);
-//     return Convert.ToInt32(Console.ReadLine());
-// }
+void ReverseArray(int[] array)
+{
+    for(int i = 0; i < array.Length / 2; i++)
+    {
+        int temp = array[i];
+        array[i] = array[array.Length - 1 - i];
+        array[array.Length - 1 - i] = temp;
+    }
+}
 
-// //true - есть элемент в массиве
-// //false - элемент в массиве отсутствует
-// bool IsNumberInArray(int[] arr, int findNumber)
-// {
-//     bool isNumberInArray = false; //
-//     for(int i = 0; i < arr.Length; i++)
-//     {
-//         if (arr[i] == findNumber)
-//         {
-//             isNumberInArray = true;
-//         }
-//     }
-//     return isNumberInArray;
-// }
+int[] arr = GetArray(5, 0, 10);
+Console.WriteLine($"Исходный массив = {string.Join(", ", arr)}");
+ReverseArray(arr);
+Console.WriteLine($"Развернутый массив = {string.Join(", ", arr)}");
