@@ -29,5 +29,5 @@ int CheckGreaterThanZero(int result)
 
 int positiveNumCount = 0;
 Console.WriteLine("Введите число");
-Console.WriteLine(CheckGreaterThanZero(positiveNumCount));
+Console.WriteLine($"Пользователь ввёл {CheckGreaterThanZero(positiveNumCount)} чисел больше 0");
 
