@@ -16,7 +16,7 @@ int CheckGreaterThanZero(int result)
         }
         else
         {
-            int answerNumber = Convert.ToInt32(answer);
+            int.TryParse(answer, out int answerNumber);
             if (answerNumber > 0)
             {
                 greaterThanZeroNum++;
