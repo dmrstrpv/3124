@@ -7,7 +7,7 @@
 // 45(1,0,0) 53(1,0,1)
 
 
-int[,,] FillMatrix(int rowsCount, int columnsCount, int depthCount, int leftRange, int rightRange)
+int[,,] FillMatrix(int rowsCount, int columnsCount, int depth, int leftRange, int rightRange)
 {
     int[,,] arr = new int[2, 2, 2];
 
@@ -17,7 +17,7 @@ int[,,] FillMatrix(int rowsCount, int columnsCount, int depthCount, int leftRang
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            for (int k = 0; k < arr.GetLength(1); k++)
+            for (int k = 0; k < arr.GetLength(2); k++)
             {
                 arr[i, j, k] = randomNum.Next(leftRange, rightRange);
             }
